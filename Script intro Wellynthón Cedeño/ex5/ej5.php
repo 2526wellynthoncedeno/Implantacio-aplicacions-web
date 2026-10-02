@@ -8,6 +8,8 @@ $iva = $_POST["iva"];
 $resultado = $precio + ($precio * ($iva / 100));
 
 echo "Hola, el precio con el iva insertado es de: " . $resultado . ". Gracias por su consulta ";
+
 } else { echo "Oye te falta algo!";
+
 }
 ?>
