@@ -1,10 +1,10 @@
 <?php
-if(isset['enviar']){
+if(isset($_GET['enviar'])){
     setcookie('majoredat', $_GET['edad']);
-    setcookie('idioma',$_GET['idioma']);
-    setcookie('moneda',$_GET['']);
-header("Location: informacion.php");
-exit();
+    setcookie('idioma', $_GET['idioma']);
+    setcookie('moneda', $_GET['moneda']);
+    header("Location: informacion.php");
+    exit();
 }
 ?>
 
@@ -22,6 +22,12 @@ exit();
         <option value="en"> Egnlish </option>
     </select>
     <p> Moneda </p>
+    <select name="moneda">
+        <option value="EUR">Euros (€)</option>
+        <option value="USD">Dolares ($)</option>
+        <option value="GBP">Libras (£)</option>
+        </select>
+    <input type = "submit" name ="enviar" value="Entrar">
     </form>
  </body>
 </html>
